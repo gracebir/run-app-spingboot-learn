@@ -23,7 +23,6 @@ public class RunController {
         return runRepository.findAll();
     }
 
-
     @GetMapping("/{id}")
     Run getById(@PathVariable Integer id){
         Optional<Run> run =  runRepository.findById(id);
@@ -36,8 +35,8 @@ public class RunController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    Run create(@Valid @RequestBody Run run){
-        return runRepository.create(run);
+    void create(@Valid @RequestBody Run run){
+         runRepository.create(run);
     }
 
     @ResponseStatus(HttpStatus.OK)

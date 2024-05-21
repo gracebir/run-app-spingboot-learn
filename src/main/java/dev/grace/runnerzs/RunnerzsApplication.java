@@ -23,12 +23,12 @@ public class RunnerzsApplication {
 		logger.info("Application started succeessfully ===========>-----");
 	}
 
-	@Bean
-	CommandLineRunner runner(){
-		return args -> {
-			Run run = new Run(1, "First run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 5, Location.OUTDOOR);
-			logger.info("Run " + run);
-		};
-	}
+//	@Bean
+//	CommandLineRunner runner(){
+//		return args -> {
+//			Run run = new Run(1, "First run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 5, Location.OUTDOOR);
+//			logger.info("Run " + run);
+//		};
+//	}
 
 }
