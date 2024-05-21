@@ -20,15 +20,7 @@ public class RunnerzsApplication {
 	private static final Logger logger = LoggerFactory.getLogger(RunnerzsApplication.class);
 	public static void main(String[] args) {
 		SpringApplication.run(RunnerzsApplication.class, args);
-		logger.info("Application started succeessfully ===========>-----");
+		logger.info("Application started succeessfully");
 	}
-
-//	@Bean
-//	CommandLineRunner runner(){
-//		return args -> {
-//			Run run = new Run(1, "First run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 5, Location.OUTDOOR);
-//			logger.info("Run " + run);
-//		};
-//	}
 
 }
