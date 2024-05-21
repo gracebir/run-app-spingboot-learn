@@ -1,5 +1,6 @@
 package dev.grace.runnerzs.run;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -27,7 +28,7 @@ public class RunController {
     Run getById(@PathVariable Integer id){
         Optional<Run> run =  runRepository.findById(id);
         if(run.isEmpty()){
-            throw  new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw  new RunNotFoundException();
         }
 
         return  run.get();
@@ -35,7 +36,7 @@ public class RunController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    Run create(@RequestBody Run run){
+    Run create(@Valid @RequestBody Run run){
         return runRepository.create(run);
     }
 

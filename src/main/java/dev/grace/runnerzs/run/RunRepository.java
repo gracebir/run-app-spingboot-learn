@@ -43,13 +43,13 @@ public class RunRepository {
         runs.add(new Run(1,
                 "Monday Morning Run",
                 LocalDateTime.now(),
-                LocalDateTime.now(),
+                LocalDateTime.now().plusHours(1),
                 4,
                 Location.OUTDOOR));
         runs.add(new Run(2,
                 "Thursday Morning Run",
                 LocalDateTime.now(),
-                LocalDateTime.now(),
+                LocalDateTime.now().plusHours(3),
                 10,
                 Location.OUTDOOR));
     }
