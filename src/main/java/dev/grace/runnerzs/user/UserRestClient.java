@@ -24,7 +24,7 @@ public class UserRestClient {
 
     public User findById(Integer id){
         return restClient.get()
-                .uri("/user/{id}",id)
+                .uri("/users/{id}",id)
                 .retrieve()
                 .body(User.class);
     }
