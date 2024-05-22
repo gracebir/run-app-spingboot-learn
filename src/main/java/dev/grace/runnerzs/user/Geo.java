@@ -1,2 +1,7 @@
-package dev.grace.runnerzs.user;public record Geo() {
+package dev.grace.runnerzs.user;
+
+public record Geo(
+        String lat,
+        String lng
+) {
 }
