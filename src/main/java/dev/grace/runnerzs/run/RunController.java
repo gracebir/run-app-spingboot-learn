@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/runs")
+@CrossOrigin
 public class RunController {
     private final RunRepository runRepository;
 
